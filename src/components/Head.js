@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/tubehublogos.jpg'
+import logo from '../assets/thlogo.jpg'
 import { useDispatch } from 'react-redux'
 import { toggleMenu } from '../Utils/appSlice';
 
@@ -12,7 +12,7 @@ const Head = () => {
   return (
     <div className='grid grid-flow-col p-2 m-2 shadow-lg rounded-md'>
     <div className='flex col-span-1'>
-        <img className= 'w-12 h-14 p-2 cursor-pointer' onClick={()=> toggleMenuHandler()} src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png' alt = 'Hamburger-menu'/>
+    <img className= 'w-12 h-14 p-2 cursor-pointer' onClick={()=> toggleMenuHandler()} src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png' alt = 'Hamburger-menu'/>
         <img className='w-30 h-16 p-2 mx-2' src = {logo} alt ='Logo'/>
     </div>
     <div className='flex col-span-10 items-center '>
