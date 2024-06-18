@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "../Utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import WatchBody from "./WatchBody";
+import CommentsContainer from "./CommentsContainer";
+import LiveChat from "./LiveChat";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -13,9 +15,11 @@ const WatchPage = () => {
     dispatch(closeMenu());
   }, []);
   return (
-    <div>
+    <div className="flex flex-col w-full">
+
       {/* Below div is for the video */}
-      <div className="px-12 py-5">
+      <div className="px-12 py-5 flex w-full">
+      <div className="">
         <iframe
           width="1000"
           height="500"
@@ -26,8 +30,18 @@ const WatchPage = () => {
           allowFullScreen
           className="rounded-xl"
         ></iframe>
+        </div>
+        <div className="w-full">
+          <LiveChat />
+        </div>
       </div>
-      {/* <WatchBody/> */}
+      <CommentsContainer />
+      
+      {/* {videos.map(video=> (
+      <WatchBody info={video}/>
+      ))} */}
+      
+
     </div>
     
   );
