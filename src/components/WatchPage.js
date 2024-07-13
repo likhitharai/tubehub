@@ -7,6 +7,8 @@ import CommentsContainer from "./CommentsContainer";
 import LiveChat from "./LiveChat";
 
 const WatchPage = () => {
+
+
   const [searchParams] = useSearchParams();
   console.log(searchParams.get("v"));
 
@@ -30,6 +32,8 @@ const WatchPage = () => {
           allowFullScreen
           className="rounded-xl"
         ></iframe>
+        {/* --------------------------------------------------------- */}
+        {/* --------------------------------------------------------- */}
         </div>
         <div className="w-full">
           <LiveChat />
